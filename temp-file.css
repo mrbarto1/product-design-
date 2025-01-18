@@ -1,0 +1,117 @@
+:root {
+    --cpation-pos:10px;
+  } 
+@font-face {
+    font-family: 'roboto1'; 
+    src: url('Roboto-Bold.ttf') format('truetype'); 
+}
+ 
+body{
+  background: #4851ad88;
+  }  
+  
+.container{
+				display: flex;	
+				height: 29vh; 				
+				position: relative;
+				top: 90px;				
+				transition: all 0.5s;
+				 }	 						 
+.box{
+   flex:1 ;
+   margin: 2px;
+   font-size: 18px;
+				width: 20px;
+				height: 200px;
+				color: white;				
+				text-align: center;
+				align-content:center;
+				border-radius: 10px;
+				opacity: 1;
+				transition: all .5s;
+}
+ .the-title{
+   	color: #06114ccf;
+   	font-size: 26px;
+   	position: absolute;
+   	left: 95px;
+	}  
+	.description{
+					color: #06114ccf ;
+   	font-size: 10px ;
+   	position: absolute;
+   	left: 67px;
+   	top: 46px;
+	}      
+.spa{
+   font-size: 8px;
+   white-space: pre;
+				position: absolute;
+				top:163px;
+				opacity: 0;
+				transition: all .5s;
+}
+.spa.one{
+  left: 15px;	}
+.spa.two{
+  top: 154px;
+  left: 104px; }
+.spa.three{
+  top: 160px;
+  left: 192px;		}	
+  
+.caption{   
+				font-size:8px;  
+				position: absolute;		 
+				white-space: pre;   						
+				top: 200px;
+				opacity:0;
+				transition: all .5s;  }
+.caption.one{
+    left: var(--cpation-pos); }
+.caption.two{
+    left: calc(var(--cpation-pos) + 90px);
+    top: 190px;}
+.caption.three{
+    left: calc(var(--cpation-pos) + 180px);  }
+ 
+.dots{
+				width: 40px;
+				height: 2px;
+				border-radius: 40px;
+	  	position:relative;				
+				background: lightgray;
+				top: 90px; 
+				left: 38px;
+				opacity: 0.4;	
+				transition: all .5s; }
+				
+#box1{
+			background-position:center top;
+			background-size: 180px;	}
+#box2{
+				background-position:center bottom;
+				background-size: 200px;}
+				
+.box:hover {
+				flex-grow: 2;				
+}
+.box:hover .spa {
+    opacity: 1;
+    transform: translateX(-3px)   
+               translateY(-40px) ;
+    font-size: 15px;
+}
+.box:hover .caption {
+    opacity: .8;
+    transform: translateY(-60px);
+}
+.container:hover .dots{
+				transform: rotateY(90deg);
+				opacity: .3;
+}
+.container:hover .box {      
+        opacity: .7; }       
+.container:hover .box:hover{
+        opacity: 1;		}
+
